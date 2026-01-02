@@ -1,0 +1,237 @@
+/* --- ÜST KÖŞE (Hız ve Tam Ekran) --- */
+.insta-master-controls {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 9999;
+  display: flex;
+  align-items: center; /* Dikey ortalama */
+  gap: 8px;
+}
+
+/* Üstteki butonlar (Hız vb.) kutu şeklinde kalsın */
+.insta-master-btn {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 6px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  backdrop-filter: blur(4px);
+  height: 30px; /* Sabit yükseklik verelim ki hizalı dursunlar */
+}
+
+.insta-master-btn:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+  transform: scale(1.05);
+}
+
+/* --- ALT PANEL (Oynatıcı) --- */
+.insta-bottom-panel {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 60%, transparent 100%);
+  padding: 0 15px 15px 15px; /* Üst padding'i sıfırladık */
+  height: 60px; /* Panelin yüksekliğini sabitledik */
+  box-sizing: border-box;
+  display: flex;
+  align-items: end; /* Elemanları en alta hizala */
+  gap: 12px;
+  z-index: 9999;
+}
+
+/* --- İKONLAR (Play, Ses, Tam Ekran) --- */
+/* Artık buton gibi kutu içinde değil, saf ikon olarak görünecekler */
+.insta-icon-svg {
+  width: 24px;
+  height: 24px;
+  fill: #ffffff; /* Rengi zorla beyaz yap */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s;
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.5)); /* İkonun arkasına hafif gölge */
+}
+
+.insta-icon-svg:hover {
+  transform: scale(1.15);
+  opacity: 1;
+}
+
+/* SVG'lerin içindeki path'lerin de beyaz olduğundan emin olalım */
+.insta-icon-svg svg {
+  fill: #ffffff;
+  width: 100%;
+  height: 100%;
+}
+
+/* Zaman Göstergesi */
+.insta-time-text {
+  color: #eee;
+  font-size: 12px;
+  font-family: monospace;
+  min-width: 85px;
+  text-align: center;
+  margin-bottom: 5px; /* Slider ile hizalamak için */
+}
+
+/* --- SLIDER TASARIMI --- */
+input[type=range] {
+  -webkit-appearance: none;
+  background: transparent;
+  cursor: pointer;
+  height: 24px; /* Tıklama alanı geniş olsun */
+  margin-bottom: 2px;
+}
+
+/* Çubuk (Track) */
+input[type=range]::-webkit-slider-runnable-track {
+  height: 4px;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 2px;
+  transition: all 0.2s;
+}
+input[type=range]:hover::-webkit-slider-runnable-track {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+/* Yuvarlak Tutacak (Thumb) */
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  background: #fff;
+  margin-top: -4px; /* Ortalamak için */
+  box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+  transition: transform 0.1s;
+}
+
+input[type=range]:hover::-webkit-slider-thumb {
+  transform: scale(1.3);
+}
+
+#seek-slider { flex-grow: 1; }
+#volume-slider { width: 60px; }
+
+/* --- GİZLEME / GÖSTERME MANTIĞI --- */
+
+/* 1. Varsayılan Durum: Görünmez */
+.insta-master-controls, 
+.insta-bottom-panel {
+  opacity: 0; /* Görünmez yap */
+  transition: opacity 0.3s ease-in-out; /* 0.3 saniyede yumuşakça kaybolsun/gelsin */
+  pointer-events: none; /* Görünmezken tıklamayı engelle (önemli!) */
+}
+
+/* 2. Hover Durumu: Görünür */
+/* "insta-hover-box" sınıfı JS ile eklenecek */
+.insta-hover-box:hover .insta-master-controls,
+.insta-hover-box:hover .insta-bottom-panel {
+  opacity: 1; /* Tam görünür yap */
+  pointer-events: auto; /* Tıklamayı tekrar aç */
+}
+
+/* --- DİĞER STİLLER (Bozulmaması için burayı koru) --- */
+.insta-master-controls {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.insta-master-btn {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  backdrop-filter: blur(4px);
+  height: 30px;
+}
+
+.insta-master-btn:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+  transform: scale(1.05);
+}
+
+.insta-bottom-panel {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 60%, transparent 100%);
+  padding: 0 15px 15px 15px;
+  height: 60px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: end;
+  gap: 12px;
+  z-index: 9999;
+}
+
+.insta-icon-svg {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s;
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.5));
+}
+.insta-icon-svg:hover { transform: scale(1.15); }
+
+.insta-time-text {
+  color: #eee;
+  font-size: 12px;
+  font-family: monospace;
+  min-width: 85px;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+  background: transparent;
+  cursor: pointer;
+  height: 24px;
+  margin-bottom: 2px;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  height: 4px;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 2px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  background: #fff;
+  margin-top: -4px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+
+#seek-slider { flex-grow: 1; }
+#volume-slider { width: 60px; }
