@@ -3,13 +3,20 @@
   "name": "VideoMan",
   "version": "1.0",
   "description": "Sosyal medya video kontrolcüsü ve indirici.",
-  "permissions": ["downloads"],
-  "host_permissions": ["https://*.instagram.com/*"],
+  "permissions": [
+    "downloads"
+  ],
+  "host_permissions": [
+    "https://*.instagram.com/*",
+    "https://*.tiktok.com/*",
+    "https://*.twitter.com/*",
+    "https://*.x.com/*"
+  ],
   "icons": {
-      "16": "icons/icon16.png",
-      "48": "icons/icon48.png",
-      "128": "icons/icon128.png"
-    },
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
   "action": {
     "default_icon": {
       "16": "icons/icon16.png",
@@ -24,13 +31,39 @@
   },
   "content_scripts": [
     {
-      "matches": ["*://*.instagram.com/*"],
+      "matches": [
+        "*://*.instagram.com/*"
+      ],
       "js": [
-        "content/icons.js",
-        "content/utils.js",
         "content.js"
       ],
-      "css": ["style.css"]
+      "type": "module",
+      "css": [
+        "style.css"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "src/icons.js",
+        "src/utils.js",
+        "src/utils/dom.js",
+        "src/utils/fetch.js",
+        "src/utils/object.js",
+        "src/utils/time.js",
+        "src/instagram/api.js",
+        "src/instagram/bootstrap.js",
+        "src/instagram/constants.js",
+        "src/instagram/dom.js",
+        "src/instagram/postControls.js",
+        "src/instagram/state.js",
+        "src/instagram/storyControls.js",
+        "src/instagram/videoDetection.js"
+      ],
+      "matches": [
+        "*://*.instagram.com/*"
+      ]
     }
   ]
 }
