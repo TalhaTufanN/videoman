@@ -2,7 +2,7 @@
 
 **VideoMan (Video Manager)** is an open-source tool that allows you to **control and download videos from social media platforms** in a simple and extensible way.
 
-Currently, VideoMan supports **Instagram**, and the project is actively designed to be expanded to platforms such as **Twitter (X), TikTok, and Facebook**.
+Currently, VideoMan supports **Instagram and Twitter (X)**, and the project is actively designed to be expanded to platforms such as **TikTok, and Facebook**.
 
 ---
 
@@ -21,7 +21,7 @@ Currently, VideoMan supports **Instagram**, and the project is actively designed
 | Platform   | Status      |
 | ---------- | ----------- |
 | Instagram  | ✅ Supported |
-| Twitter(X) | ⏳ Planned   |
+| Twitter(X) | ✅ Supported |
 | TikTok     | ⏳ Planned   |
 | Facebook   | ⏳ Planned   |
 
@@ -65,7 +65,7 @@ This project is licensed under the **MIT License**.
 
 **VideoMan (Video Manager)**, sosyal medya platformlarındaki videoları **kontrol etmeyi ve indirmeyi** sağlayan açık kaynaklı bir araçtır.
 
-Şu anda **Instagram** desteklenmektedir. İlerleyen sürümlerde **Twitter (X), TikTok ve Facebook** desteği eklenmesi planlanmaktadır.
+Şu anda **Instagram ve Twitter** desteklenmektedir. İlerleyen sürümlerde **TikTok ve Facebook** desteği eklenmesi planlanmaktadır.
 
 ---
 
@@ -84,7 +84,7 @@ This project is licensed under the **MIT License**.
 | Platform   | Durum           |
 | ---------- | --------------- |
 | Instagram  | ✅ Destekleniyor |
-| Twitter(X) | ⏳ Planlanıyor   |
+| Twitter(X) | ✅ Destekleniyor |
 | TikTok     | ⏳ Planlanıyor   |
 | Facebook   | ⏳ Planlanıyor   |
 
