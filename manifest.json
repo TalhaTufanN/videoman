@@ -30,7 +30,7 @@
       "128": "icons/icon128.png"
     },
     "default_title": "VideoMan - Video Manager",
-    "default_popup": "src/x/popup.html"
+    "default_popup": "src/popup.html"
   },
   "options_ui": {
     "page": "src/options.html",

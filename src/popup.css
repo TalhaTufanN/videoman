@@ -1,0 +1,93 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 16px;
+  width: 320px;
+  background: #ffffff;
+  color: #0f1419;
+}
+
+h1 {
+  font-size: 16px;
+  margin: 0;
+}
+
+p {
+  margin: 4px 0 0;
+  color: #536471;
+  font-size: 12px;
+}
+
+.popup-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.link-button {
+  border: none;
+  background: none;
+  color: #1d9bf0;
+  cursor: pointer;
+  font-weight: 600;
+  padding: 4px 8px;
+}
+
+.history-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.history-item {
+  padding: 8px 0;
+  border-bottom: 1px solid #eff3f4;
+}
+
+.history-item:last-child {
+  border-bottom: none;
+}
+
+.history-filename {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 600;
+  color: #0f1419;
+}
+
+.history-meta {
+  margin: 2px 0 0;
+  font-size: 11px;
+  color: #536471;
+}
+
+.history-meta a {
+  color: #1d9bf0;
+  text-decoration: none;
+}
+
+.danger-button {
+  width: 100%;
+  background: #f4212e;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 24px 0;
+  color: #536471;
+  font-size: 13px;
+}
+

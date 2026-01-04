@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <title>VideoMan - Medya Geçmişi</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header class="popup-header">
+      <div>
+        <h1>Medya Geçmişi</h1>
+        <p>Son indirilen fotoğraf ve videolar</p>
+      </div>
+      <button id="openOptions" class="link-button" type="button">Ayarlar</button>
+    </header>
+
+    <section id="historyContainer">
+      <p id="emptyState" class="empty-state">Henüz kayıt yok.</p>
+      <ul id="historyList" class="history-list"></ul>
+    </section>
+
+    <footer class="popup-footer">
+      <button id="clearHistory" class="danger-button" type="button">Geçmişi temizle</button>
+    </footer>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
+
