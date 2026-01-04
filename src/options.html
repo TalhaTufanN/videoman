@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <title>VideoMan - Ayarlar</title>
+    <link rel="stylesheet" href="options.css" />
+  </head>
+  <body>
+    <main class="options-container">
+      <header>
+        <h1>Videoman Ayarları</h1>
+        <p>Eklentinin çalışma şeklini özelleştirin.</p>
+      </header>
+
+      <form id="settingsForm" class="form-section">
+        <section>
+          <h2>Genel</h2>
+          <label class="toggle">
+            <input type="checkbox" id="autoRevealSensitive" />
+            <span>Hassas içerikleri otomatik göster</span>
+          </label>
+        </section>
+
+        <section>
+          <h2>İndirme Motoru</h2>
+          <label class="toggle">
+            <input type="checkbox" id="useAria2" />
+            <span>İndirmeleri Aria2 ile gerçekleştir</span>
+          </label>
+
+          <label class="toggle">
+            <input type="checkbox" id="preferAria2ForVideos" />
+            <span>Videoları her zaman Aria2 ile indir</span>
+          </label>
+
+          <div class="field">
+            <label for="aria2Url">Aria2 RPC URL</label>
+            <input type="url" id="aria2Url" placeholder="http://127.0.0.1:6800/jsonrpc" />
+          </div>
+
+          <div class="field">
+            <label for="aria2Secret">Aria2 Secret (opsiyonel)</label>
+            <input type="text" id="aria2Secret" placeholder="token" />
+          </div>
+        </section>
+
+        <div class="actions">
+          <button type="submit">Kaydet</button>
+          <span id="statusMessage" aria-live="polite"></span>
+        </div>
+      </form>
+    </main>
+
+    <script src="options.js"></script>
+  </body>
+</html>
+

@@ -1,0 +1,98 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #f0f3f6;
+  color: #0f1419;
+}
+
+.options-container {
+  max-width: 640px;
+  margin: 32px auto;
+  background: #fff;
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(15, 20, 25, 0.08);
+}
+
+h1 {
+  margin: 0 0 8px;
+}
+
+p {
+  margin: 0 0 24px;
+  color: #536471;
+}
+
+.form-section section {
+  margin-bottom: 24px;
+}
+
+.form-section h2 {
+  margin: 0 0 12px;
+  font-size: 16px;
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.toggle input {
+  width: 20px;
+  height: 20px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+}
+
+.field label {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.field input {
+  padding: 10px;
+  border: 1px solid #cfd9de;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.actions button {
+  background: #1d9bf0;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 999px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#statusMessage {
+  font-size: 13px;
+  min-height: 18px;
+}
+
+#statusMessage.success {
+  color: #1d9bf0;
+}
+
+#statusMessage.error {
+  color: #f4212e;
+}
+
